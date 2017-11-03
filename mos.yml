@@ -1,21 +1,30 @@
-author: Bradley Smith <bradley.1.smith@gmail.com>
+author: pedalPusher68
 type: lib
-description: Arduino Adafruit TSL2561 library ported as a Mongoose OS library
+description: Arduino Adafruit TSL2561 library converted for Mongoose OS
 version: 1.0
 
 sources:
   - src
+
+includes:
+  - include
+
 filesystem:
   - fs
+
 config_schema:
+
 libs:
   - origin: https://github.com/mongoose-os-libs/arduino-compat
   - origin: https://github.com/mongoose-os-libs/arduino-wire
   - origin: https://github.com/mongoose-os-libs/arduino-spi
 tags:
-  - arduino
   - c
   - js
-  - hw
+  - arduino
+  - tsl2561
+  - TSL2561
+  - i2c
+  - sensor
 
 manifest_version: 2017-09-29
