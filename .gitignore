@@ -2,3 +2,4 @@
 *.iml
 cmake-build-debug
 cmake-build-debug/*
+_config.yml
