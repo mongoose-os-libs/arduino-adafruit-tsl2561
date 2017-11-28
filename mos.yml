@@ -1,6 +1,6 @@
 author: pedalPusher68
 type: lib
-description: Arduino Adafruit TSL2561 library converted for Mongoose OS
+description: Arduino Adafruit HTU21D-F library converted for Mongoose OS
 version: 1.0
 
 sources:
@@ -17,13 +17,16 @@ config_schema:
 libs:
   - origin: https://github.com/mongoose-os-libs/arduino-compat
   - origin: https://github.com/mongoose-os-libs/arduino-wire
-  - origin: https://github.com/mongoose-os-libs/arduino-spi
 tags:
   - c
   - js
   - arduino
-  - tsl2561
-  - TSL2561
+  - htu21d
+  - HTU21D
+  - htu21d-f
+  - HTU21D-F
+  - htu21d(f)
+  - HTU21D(F)
   - i2c
   - sensor
 

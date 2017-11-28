@@ -1,5 +1,5 @@
 .idea
-*.iml
 cmake-build-debug
-cmake-build-debug/*
+build
+deps
 _config.yml
