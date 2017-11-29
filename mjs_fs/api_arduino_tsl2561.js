@@ -1,6 +1,6 @@
 let Adafruit_TSL2561 = {
 
-    // ## ** I2C Address Options**
+    // ## ** I2C Address Options **
     // ### ** Adafruit_TSL2561.TSL2561_ADDR_LOW **
     // value is `0x29`
     TSL2561_ADDR_LOW: 0x29,
@@ -11,9 +11,15 @@ let Adafruit_TSL2561 = {
     // value is `0x49`
     TSL2561_ADDR_HIGH: 0x49,
 
-    //
-    TSL2561_VISIBLE: 2,              // channel 0 - channel 1
+    // ## ** `getLuminosity( p )` Parameter (p) Options **
+    // ### ** Adafruit_TSL2561.TSL2561_VISIBLE **
+    // get visible luminosity:  channel 0 - channel 1
+    TSL2561_VISIBLE: 2,               // channel 0 - channel 1
+    // ### ** Adafruit_TSL2561.TSL2561_INFRARED **
+    // get infrared luminosity:  channel 1
     TSL2561_INFRARED: 1,              // channel 1
+    // ### ** Adafruit_TSL2561.TSL2561_FULLSPECTRUM **
+    // get full-spectrum luminosity:  channel 0
     TSL2561_FULLSPECTRUM: 0,           // channel 0
 
     //
