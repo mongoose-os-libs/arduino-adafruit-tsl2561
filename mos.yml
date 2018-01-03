@@ -1,7 +1,7 @@
 author: pedalPusher68
 type: lib
 description: Arduino Adafruit TSL2561 library converted for Mongoose OS
-version: 1.0
+version: 1.0.1
 
 sources:
   - src

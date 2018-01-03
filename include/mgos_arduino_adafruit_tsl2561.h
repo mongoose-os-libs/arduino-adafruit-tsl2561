@@ -5,7 +5,21 @@
 #ifndef ARDUINO_ADAFRUIT_TSL2561_MGOS_ARDUINO_ADAFRUIT_TSL2561_H
 #define ARDUINO_ADAFRUIT_TSL2561_MGOS_ARDUINO_ADAFRUIT_TSL2561_H
 
+#ifdef __cplusplus
 #include "TSL2561.h"
+#else
+typedef struct TSL2561Tag TSL2561;
+#endif
+
+#ifndef TSL2561_ADDR_LOW
+#define TSL2561_ADDR_LOW  0x29
+#endif
+#ifndef TSL2561_ADDR_FLOAT
+#define TSL2561_ADDR_FLOAT 0x39
+#endif
+#ifndef TSL2561_ADDR_HIGH
+#define TSL2561_ADDR_HIGH 0x49
+#endif
 
 #ifdef __cplusplus
 extern "C" {
