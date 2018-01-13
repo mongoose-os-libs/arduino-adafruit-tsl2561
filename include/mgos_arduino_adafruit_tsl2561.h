@@ -21,6 +21,17 @@ typedef struct TSL2561Tag TSL2561;
 #define TSL2561_ADDR_HIGH 0x49
 #endif
 
+#ifndef TSL2561_VISIBLE
+#define TSL2561_VISIBLE 2                   // channel 0 - channel 1
+#endif
+#ifndef TSL2561_INFRARED
+#define TSL2561_INFRARED 1                  // channel 1
+#endif
+#ifndef TSL2561_FULLSPECTRUM
+#define TSL2561_FULLSPECTRUM 0              // channel 0
+#endif
+
+
 #ifdef __cplusplus
 extern "C" {
 #endif
