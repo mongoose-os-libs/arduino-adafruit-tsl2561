@@ -22,8 +22,8 @@ void mgos_tsl2561_disable(TSL2561 *tsl) {
     }
 }
 
-int mgos_tsl2561_getLuminosity(TSL2561 *tsl, int lumo) {
-    return (tsl == nullptr) ? -1 : tsl->getLuminosity(lumo);
+int mgos_tsl2561_getLuminosity(TSL2561 *tsl, int channel) {
+    return (tsl == nullptr) ? -1 : tsl->getLuminosity(channel);
 }
 
 int mgos_tsl2561_getFullLuminosity(TSL2561 *tsl) {
