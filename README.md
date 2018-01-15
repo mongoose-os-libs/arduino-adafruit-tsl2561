@@ -7,7 +7,7 @@ Usage is extremely simple....
 
 in _**mos.yml**_, add to **libs:** section,
 
-`  - origin: https://github.com/pedalPusher68/arduino-adafruit-tsl2561 `
+`  - origin: https://github.com/mongoose-os-libs/arduino-adafruit-tsl2561 `
   
 in your _**init.js**_, add something like the following,
 
