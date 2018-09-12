@@ -26,5 +26,6 @@ tags:
   - TSL2561
   - i2c
   - sensor
+  - docs:arduino:Adafruit TSL2561
 
 manifest_version: 2017-09-29
