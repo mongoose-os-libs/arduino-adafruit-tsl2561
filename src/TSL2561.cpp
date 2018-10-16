@@ -156,24 +156,40 @@ uint32_t TSL2561::calculateLux(uint16_t ch0, uint16_t ch1) {
     unsigned int b, m;
 
 #ifdef TSL2561_PACKAGE_CS
-    if ((ratio >= 0) && (ratio <= TSL2561_LUX_K1C))
-      {b=TSL2561_LUX_B1C; m=TSL2561_LUX_M1C;}
-    else if (ratio <= TSL2561_LUX_K2C)
-      {b=TSL2561_LUX_B2C; m=TSL2561_LUX_M2C;}
-    else if (ratio <= TSL2561_LUX_K3C)
-      {b=TSL2561_LUX_B3C; m=TSL2561_LUX_M3C;}
-    else if (ratio <= TSL2561_LUX_K4C)
-      {b=TSL2561_LUX_B4C; m=TSL2561_LUX_M4C;}
-    else if (ratio <= TSL2561_LUX_K5C)
-      {b=TSL2561_LUX_B5C; m=TSL2561_LUX_M5C;}
-    else if (ratio <= TSL2561_LUX_K6C)
-      {b=TSL2561_LUX_B6C; m=TSL2561_LUX_M6C;}
-    else if (ratio <= TSL2561_LUX_K7C)
-      {b=TSL2561_LUX_B7C; m=TSL2561_LUX_M7C;}
-    else if (ratio > TSL2561_LUX_K8C)
-      {b=TSL2561_LUX_B8C; m=TSL2561_LUX_M8C;}
+    if (ratio <= TSL2561_LUX_K1C) {
+          b=TSL2561_LUX_B1C; 
+          m=TSL2561_LUX_M1C;
+      }
+    else if (ratio <= TSL2561_LUX_K2C) {
+          b=TSL2561_LUX_B2C; 
+          m=TSL2561_LUX_M2C;
+    }
+    else if (ratio <= TSL2561_LUX_K3C) {
+        b=TSL2561_LUX_B3C; 
+        m=TSL2561_LUX_M3C;
+    }
+    else if (ratio <= TSL2561_LUX_K4C) {
+        b=TSL2561_LUX_B4C; 
+        m=TSL2561_LUX_M4C;
+    }
+    else if (ratio <= TSL2561_LUX_K5C) {
+        b=TSL2561_LUX_B5C; 
+        m=TSL2561_LUX_M5C;
+    }
+    else if (ratio <= TSL2561_LUX_K6C) {
+        b=TSL2561_LUX_B6C;
+        m=TSL2561_LUX_M6C;
+    }
+    else if (ratio <= TSL2561_LUX_K7C) {
+        b=TSL2561_LUX_B7C;
+        m=TSL2561_LUX_M7C;
+    }
+    else if (ratio > TSL2561_LUX_K8C) {
+        b=TSL2561_LUX_B8C; 
+        m=TSL2561_LUX_M8C;
+    }
 #else
-    if ((ratio >= 0) && (ratio <= TSL2561_LUX_K1T)) {
+    if (ratio <= TSL2561_LUX_K1T) {
         b = TSL2561_LUX_B1T;
         m = TSL2561_LUX_M1T;
     }
@@ -209,9 +225,6 @@ uint32_t TSL2561::calculateLux(uint16_t ch0, uint16_t ch1) {
 
     unsigned long temp;
     temp = ((channel0 * b) - (channel1 * m));
-
-    // do not allow negative lux value
-    if (temp < 0) temp = 0;
 
     // round lsb (2^(LUX_SCALE-1))
     temp += (1 << (TSL2561_LUX_LUXSCALE - 1));
